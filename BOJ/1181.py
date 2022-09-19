@@ -1,4 +1,4 @@
-cnt = int(input())
+icnt = int(input())
 words = []
 for i in range(cnt):
     word = input()
