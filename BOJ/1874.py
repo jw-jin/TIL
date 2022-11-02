@@ -19,6 +19,7 @@ while(len(res) < n):
     for i in num_list:
         if(idx==n):
             idx=0
+        
         if(want_num[idx] not in st):
             st.append(i)
             output.append("+")
@@ -39,6 +40,7 @@ while(len(res) < n):
 
 
 if(fail == 0):
-    print(output)
+    for i in output:
+        print(i)
 else:
     print("NO")
