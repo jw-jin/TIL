@@ -1,7 +1,9 @@
-from bisect import bisect_left, bisect_right
+from collections import deque
 
-arr = [9, 13 ,30 ,40, 50]
+q = deque()
+q.append([0,1])
 
-res = bisect_left(arr, 1)
-print(res)
-print(arr[res])
+a = q.pop()
+print(a)
+print(a[0])
+print(a[1])
