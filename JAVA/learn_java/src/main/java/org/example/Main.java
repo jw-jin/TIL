@@ -159,5 +159,27 @@ public class Main {
         System.out.println(ad);
         ad.push(5);
         System.out.println(ad);
+
+        //map
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("a",1); // put(k,v) 키값 쌍 추가
+        map.put("a",2); // 키가 이미 존재하는 경우, 값 업데이트
+        map.put("b",2);
+        System.out.println(map.get("b")); // 키가 b인 value print
+        System.out.println(map);
+
+        Map<String, Integer> map2 = new HashMap<>();
+        map2.put("c",3);
+        map2.put("d",4):
+        map.putAll(map2); // map2의 값들 모두 map에 추가
+        System.out.println(map);
+        map.remove(3);
+
+        Set keyset = map.keySet();
+
+
+
+
     }
 }
