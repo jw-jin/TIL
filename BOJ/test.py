@@ -1,4 +1,5 @@
-from collections import deque
-a = {}
-print(dir(a))
+arr = [[1,2]]
 
+x,y = arr[0]
+print(x)
+print(y)

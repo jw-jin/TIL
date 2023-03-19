@@ -8,7 +8,6 @@ def recur(n,N,x1,x2,y1,y2):
     if n == 1:
         return 
 
-    
     if (r<ymid and c<xmid):
         nx1 = x1; nx2 = xmid; ny1 = y1; ny2 = ymid;
     elif (r<ymid and c>=xmid):
