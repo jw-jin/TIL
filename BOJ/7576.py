@@ -3,6 +3,7 @@
 # 1 익음 0 안익음 -1 없음 2 다음날 익음
 from collections import deque
 import sys
+import copy
 input = sys.stdin.readline
 movex = [0,0,-1,1] # 상 하 좌 우
 movey = [1,-1,0,0]
@@ -30,6 +31,7 @@ def bfs(arr,arr1,m,n,visited):
                 arr[my][mx] = 1
                 xcnt +=1
                 q.append([my,mx])
+                visited[my][mx] = 1
         visited[y][x] = 1
         
         qcnt += 1
@@ -42,11 +44,10 @@ def bfs(arr,arr1,m,n,visited):
             xcnt = 0
             qcnt = 0
             qlen = len(q)
-            
         if (n*m)-chkm1 <= xsum:
             return days
 
-    return days       
+    return days
 
 M,N = map(int,input().split())
 
@@ -55,6 +56,12 @@ arr = []
 
 for _ in range(N):
     arr.append(list(map(int,input().split())))
+
+for i in range(N):
+    for j in range(M):
+        if arr[i][j] == -1:
+            visited[i][j] = -1
+
 
 chk0 = 0
 global chkm1
@@ -94,4 +101,14 @@ elif chk0 == 0:
     print(0)
 else:
     res = bfs(arr,arr1,M,N,visited)
-    print(res)
+    fail = 0
+    for i in range(N):
+        for j in range(M):
+            if visited[i][j] == 0:
+                fail = 1
+                break
+
+    if fail:
+        print(-1)
+    else:
+        print(res)
