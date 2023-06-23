@@ -1,6 +1,2 @@
 # TIL
-BOJ
-
-Team
-
-princesssubinwith5man https://github.com/princesssubinwith5man
+알고리즘
